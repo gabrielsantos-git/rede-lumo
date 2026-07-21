@@ -372,10 +372,49 @@ main {
     padding: 0;
 }
 
+/* listras diagonais de borda nítida (hard stops) — dão textura ao painel
+   sem recorrer a degradê esfumaçado */
 .photos-text {
-    flex: 0 0 28%;
-    background: var(--teal-dark);
+    /* 28% da tela, mas nunca tão estreito que espreme o texto
+       nem tão largo que rouba espaço da imagem em telas grandes */
+    flex: 0 0 clamp(290px, 28%, 430px);
+    position: relative;
+    overflow: hidden;
+    background:
+        repeating-linear-gradient(
+            -45deg,
+            rgba(255, 255, 255, 0.045) 0 3px,
+            transparent 3px 16px
+        ),
+        var(--teal-dark);
     padding: 64px 2.5vw;
+}
+
+/* faixa laranja em degrau, no canto inferior do painel */
+.photos-text::after {
+    content: '';
+    position: absolute;
+    left: -20px;
+    bottom: 48px;
+    width: 120px;
+    height: 14px;
+    background: var(--orange);
+    transform: skew(-30deg);
+    box-shadow: 26px 26px 0 var(--orange), 52px 52px 0 var(--orange);
+}
+
+/* chevron acima do título, dentro do bloco fixo.
+   Dupla classe para vencer o position:absolute da regra base, que vem depois no arquivo. */
+.chevron-decor.chevron-decor-inline {
+    position: static;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 24px;
+}
+
+.chevron-decor.chevron-decor-inline span {
+    width: 38px;
+    height: 12px;
 }
 
 /* o texto acompanha a rolagem das imagens em vez de se repetir a cada uma */
