@@ -156,12 +156,13 @@ article {
     padding: 0;
 }
 
-article img {
+article img,
+article video {
     width: 100%;
     /* acompanha a largura da tela, com piso no celular e teto em telas grandes */
     height: clamp(240px, 38vw, 560px);
     object-fit: cover;
-    /* enquadra pela parte de cima: com 'center' o corte comia o rosto da professora */
+    /* enquadra pela parte de cima: com 'center' o corte comia o roto da professora */
     object-position: center 22%;
     border-radius: 0;
     background: linear-gradient(135deg, var(--teal-dark), var(--teal));
@@ -660,6 +661,145 @@ main.page {
 
 .btn:hover {
     opacity: 0.88;
+}
+
+/* ----- Formulários de contato ----- */
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    margin: 32px 0;
+}
+
+.contact-item {
+    background: var(--teal-light);
+    padding: 24px;
+    border-radius: 8px;
+    border-left: 4px solid var(--orange);
+}
+
+.contact-item h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--teal-dark);
+    margin: 0 0 8px 0;
+}
+
+.contact-item p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 32px 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--teal-dark);
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-family: inherit;
+    border: 2px solid var(--text-muted);
+    border-radius: 6px;
+    background: var(--white);
+    color: var(--text-dark);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--orange);
+    box-shadow: 0 0 0 3px rgba(242, 101, 34, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+.form-group label:has(input[type="checkbox"]) {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* ----- Materiais de imprensa ----- */
+.press-materials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin: 32px 0;
+}
+
+.press-item {
+    background: var(--teal-light);
+    padding: 24px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.press-item h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--teal-dark);
+    margin: 0 0 12px 0;
+}
+
+.press-item p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin: 0 0 16px 0;
+}
+
+/* ----- Tipos de manifestação ----- */
+.manifestation-types {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin: 32px 0;
+}
+
+.manifestation-item {
+    background: var(--white);
+    padding: 24px;
+    border-radius: 8px;
+    border: 2px solid var(--teal-light);
+}
+
+.manifestation-item h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--teal-dark);
+    margin: 0 0 12px 0;
+}
+
+.manifestation-item p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin: 0;
 }
 
 /* Quem somos: hero em foto + perfil do CEO */
@@ -1659,30 +1799,78 @@ footer .footer-top {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 32px;
+    gap: 48px;
     padding-bottom: 32px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-footer img {
-    height: 36px;
+footer .footer-brand {
+    flex: 0 0 280px;
 }
 
-footer nav {
+footer .footer-brand img {
+    height: 120px;
+    margin-bottom: 16px;
+}
+
+footer .footer-brand p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+footer .footer-links {
+    flex: 1;
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 48px;
 }
 
-footer nav a {
-    color: rgba(255, 255, 255, 0.85);
+footer .footer-column {
+    flex: 1;
+    min-width: 140px;
+}
+
+footer .footer-column h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 16px;
+}
+
+footer .footer-column nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer .footer-column nav a {
+    color: rgba(255, 255, 255, 0.75);
     text-decoration: none;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
+    transition: color 0.2s ease;
 }
 
-footer nav a:hover {
+footer .footer-column nav a:hover {
     color: var(--orange);
+}
+
+footer .footer-column nav a.active {
+    color: var(--white);
+    font-weight: 600;
+}
+
+footer .footer-social {
+    flex: 0 0 auto;
+}
+
+footer .footer-social h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 16px;
 }
 
 footer .social {
@@ -2220,13 +2408,24 @@ footer .footer-bottom {
 
     footer .footer-top {
         flex-direction: column;
-        align-items: flex-start;
+        gap: 32px;
+    }
+
+    footer .footer-brand {
+        flex: 1 1 auto;
+    }
+
+    footer .footer-links {
+        flex-direction: column;
         gap: 24px;
     }
 
-    footer nav {
-        flex-direction: column;
-        gap: 12px;
+    footer .footer-column {
+        min-width: auto;
+    }
+
+    footer .footer-social {
+        width: 100%;
     }
 
     footer .footer-bottom {
