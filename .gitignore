@@ -1,0 +1,11 @@
+# Documento pessoal — não faz parte do site e não deve ir para o GitHub
+assets/Carta de recomendação.RAIMUNDOdocx.docx
+*.docx
+
+# Configuração local de ferramentas
+.claude/settings.local.json
+
+# Sistema operacional
+Thumbs.db
+desktop.ini
+.DS_Store
