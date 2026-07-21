@@ -315,12 +315,10 @@ main {
     justify-content: center;
 }
 
-.nossas-escolas-image img {
+/* largura definida para o aspect-ratio do card poder ser calculado */
+.person-card {
     width: 100%;
-    height: auto;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: var(--radius);
+    max-width: 260px;
 }
 
 /* auto-fill + minmax: o número de colunas se ajusta sozinho em qualquer
@@ -666,7 +664,8 @@ main.page {
     flex: 0 0 260px;
 }
 
-.ceo-bio-photo {
+/* card de pessoa: usado na home, em Quem somos e em Governança */
+.person-card-photo {
     aspect-ratio: 4 / 5;
     border-radius: var(--radius);
     background: var(--teal-dark);
@@ -674,16 +673,24 @@ main.page {
     align-items: center;
     justify-content: center;
     color: rgba(255, 255, 255, 0.4);
+    overflow: hidden;
 }
 
-.ceo-bio-name {
+/* quando houver foto de verdade, ela preenche o card sem alterar o formato */
+.person-card-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.person-card-name {
     text-align: center;
     font-weight: 700;
     color: var(--text);
     margin-top: 16px;
 }
 
-.ceo-bio-role {
+.person-card-role {
     text-align: center;
     font-style: italic;
     color: var(--text-muted);
