@@ -220,7 +220,7 @@ header nav a.active::after {
 }
 
 .nav-dropdown-menu a {
-    position: static;
+    position: relative;
     padding: 10px 14px;
     border-radius: 8px;
     font-size: 14px;
@@ -229,13 +229,26 @@ header nav a.active::after {
 }
 
 .nav-dropdown-menu a::after {
-    display: none;
+    content: '';
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 4px;
+    height: 2px;
+    background: var(--teal-dark);
+    border-radius: 1px;
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
 }
 
 .nav-dropdown-menu a:hover,
 .nav-dropdown-menu a.active {
-    background: var(--bg-light);
     color: var(--teal-dark);
+}
+
+.nav-dropdown-menu a:hover::after,
+.nav-dropdown-menu a.active::after {
+    transform: scaleX(1);
 }
 
 .nav-toggle {

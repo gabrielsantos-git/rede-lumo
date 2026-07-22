@@ -5,6 +5,18 @@
 
     if (!svg || !select || !results) return;
 
+    // O viewBox original (0 0 1080 1080) sobra bastante espaço vazio ao redor
+    // do desenho do Brasil. Ajusta o viewBox ao contorno real do mapa para
+    // que ele preencha o card desde o topo, sem margens invisíveis.
+    (() => {
+        const bbox = svg.getBBox();
+        const pad = Math.max(bbox.width, bbox.height) * 0.02;
+        svg.setAttribute(
+            'viewBox',
+            `${bbox.x - pad} ${bbox.y - pad} ${bbox.width + pad * 2} ${bbox.height + pad * 2}`
+        );
+    })();
+
     const paths = Array.from(svg.querySelectorAll('path[id^="BR-"]'));
     const labels = Array.from(svg.querySelectorAll('text[id]'));
 
