@@ -178,27 +178,46 @@ main {
 /* ----- infoLumo: heading + stats ----- */
 .infoLumo {
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
     padding: 72px 0 56px;
     border-bottom: 1px solid #eef1f1;
+    background: var(--bg-light);
 }
 
 .infoLumo > h1 {
-    flex: 1 1 420px;
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 800;
     line-height: 1.2;
     color: var(--teal-dark);
-    max-width: 560px;
+    text-align: center;
+}
+
+.infoLumo-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
 }
 
 .infoLumo section {
-    flex: 1 1 200px;
-    background: var(--bg-light);
+    flex: 1 1 240px;
+    max-width: 300px;
+    background: var(--white);
+    border: 1px solid #d5e4e2;
     border-radius: var(--radius-sm);
-    padding: 24px 26px;
+    padding: 32px 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.infoLumo-icon {
+    color: var(--teal-dark);
+    margin-bottom: 16px;
 }
 
 .infoLumo section h4 {
@@ -209,9 +228,9 @@ main {
 
 .infoLumo section h4 strong {
     display: block;
-    font-size: 34px;
+    font-size: 30px;
     font-weight: 800;
-    color: var(--orange);
+    color: var(--teal-dark);
     margin-bottom: 6px;
     line-height: 1;
 }
