@@ -49,3 +49,21 @@ function initHorizontalCarousel(options) {
     window.addEventListener('resize', update);
     update();
 }
+
+/* Permite rolar horizontalmente com a roda do mouse em contêineres que
+   usam overflow-x nativo (ex: linha do tempo), sem precisar de setas. */
+function enableWheelHorizontalScroll(selector) {
+    const el = document.querySelector(selector);
+    if (!el) return;
+
+    el.addEventListener('wheel', (event) => {
+        if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+
+        const canScrollLeft = el.scrollLeft > 0;
+        const canScrollRight = el.scrollLeft < el.scrollWidth - el.clientWidth;
+        if ((event.deltaY < 0 && !canScrollLeft) || (event.deltaY > 0 && !canScrollRight)) return;
+
+        event.preventDefault();
+        el.scrollLeft += event.deltaY;
+    }, { passive: false });
+}
