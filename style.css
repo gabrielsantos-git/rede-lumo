@@ -358,6 +358,7 @@ main {
     transform: translateY(-6px);
     box-shadow: 0 12px 28px rgba(11, 59, 62, 0.12);
     border-color: var(--teal-dark);
+    background: linear-gradient(135deg, rgba(17, 79, 83, 0.08) 0%, rgba(242, 101, 34, 0.05) 100%);
 }
 
 .infoLumo-icon {

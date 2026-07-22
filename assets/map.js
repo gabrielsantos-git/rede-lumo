@@ -60,23 +60,15 @@
             return;
         }
 
-        const networksHtml = data.networks
-            .map((net) => {
-                const unitsHtml = net.units.map((unit) => `<li>${unit}</li>`).join('');
-                return `
-                    <div class="brasil-network">
-                        <h3>${net.name}</h3>
-                        <span class="brasil-results-count">${net.units.length} ${net.units.length === 1 ? 'unidade' : 'unidades'}</span>
-                        <ul class="brasil-results-list">${unitsHtml}</ul>
-                    </div>
-                `;
-            })
-            .join('');
+        // Cria uma lista única de todas as unidades, sem separação por redes
+        const allUnits = data.networks.flatMap((net) => net.units);
+        const unitsHtml = allUnits.map((unit) => `<li>${unit}</li>`).join('');
 
         results.innerHTML = `
             <div class="brasil-results-card">
                 <h4 class="brasil-results-state">${data.name}</h4>
-                <div class="brasil-networks">${networksHtml}</div>
+                <span class="brasil-results-count">${allUnits.length} ${allUnits.length === 1 ? 'unidade' : 'unidades'}</span>
+                <ul class="brasil-results-list">${unitsHtml}</ul>
             </div>
         `;
     }
