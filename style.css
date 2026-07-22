@@ -2012,6 +2012,7 @@ main.page {
 
 .ethics-logo-item {
     flex: 0 0 168px;
+    aspect-ratio: 3 / 2;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2022,7 +2023,8 @@ main.page {
 
 .ethics-logo-item img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: contain;
     opacity: 0.85;
     transition: opacity 0.2s ease;
 }
