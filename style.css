@@ -523,7 +523,7 @@ main {
 
 .brasil-map-wrapper {
     display: grid;
-    grid-template-columns: 1.6fr 1fr;
+    grid-template-columns: 1fr minmax(280px, 380px);
     gap: 40px;
     align-items: center;
     text-align: left;
@@ -540,7 +540,7 @@ main {
     height: auto;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
     .brasil-map-wrapper {
         width: 100vw;
         margin-left: calc(50% - 50vw);
