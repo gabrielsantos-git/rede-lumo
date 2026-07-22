@@ -523,7 +523,7 @@ main {
 
 .brasil-map-wrapper {
     display: grid;
-    grid-template-columns: 1.3fr 1fr;
+    grid-template-columns: 1.9fr 1fr;
     gap: 40px;
     align-items: center;
     text-align: left;
@@ -536,7 +536,7 @@ main {
 
 .brasil-map svg {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1600px;
     height: auto;
 }
 
@@ -587,9 +587,12 @@ main {
 
 .brasil-results {
     background: var(--bg-light);
+    border: 1px solid #e3e9e8;
     border-radius: var(--radius);
     padding: 32px;
     min-height: 220px;
+    max-height: 520px;
+    overflow-y: auto;
     display: flex;
     align-items: center;
 }
@@ -599,19 +602,29 @@ main {
     font-size: 15px;
 }
 
+.brasil-results-card {
+    width: 100%;
+}
+
 .brasil-results-card h3 {
     font-size: 22px;
     font-weight: 800;
     color: var(--teal-dark);
-    margin-bottom: 6px;
+    margin-bottom: 10px;
 }
 
 .brasil-results-count {
-    display: inline-block;
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--orange);
-    margin-bottom: 16px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--teal-dark);
+    padding: 5px 12px;
+    border-radius: 999px;
+    margin-bottom: 18px;
 }
 
 .brasil-results-list {
@@ -620,16 +633,38 @@ main {
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
 }
 
 .brasil-results-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
     font-size: 14px;
+    font-weight: 500;
     color: var(--text);
-    padding: 10px 14px;
+    padding: 12px 16px;
     background: var(--white);
-    border-radius: 8px;
+    border-radius: 10px;
     border: 1px solid #eef1f1;
+    border-left: 3px solid var(--teal-dark);
+    box-shadow: 0 1px 2px rgba(16, 42, 40, 0.04);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.brasil-results-list li:hover {
+    transform: translateX(2px);
+    border-color: var(--orange);
+    box-shadow: 0 4px 10px rgba(16, 42, 40, 0.08);
+}
+
+.brasil-results-list li::before {
+    content: '';
+    flex: none;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--orange);
 }
 
 /* ===== Inner pages ===== */
