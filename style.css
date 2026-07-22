@@ -603,20 +603,41 @@ main {
     max-height: 520px;
     overflow-y: auto;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .brasil-results-empty {
     color: var(--text-muted);
     font-size: 15px;
+    margin: auto 0;
 }
 
 .brasil-results-card {
     width: 100%;
 }
 
+.brasil-results-state {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 20px;
+}
+
+.brasil-networks {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.brasil-network + .brasil-network {
+    padding-top: 24px;
+    border-top: 1px solid #e3e9e8;
+}
+
 .brasil-results-card h3 {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 800;
     color: var(--teal-dark);
     margin-bottom: 10px;

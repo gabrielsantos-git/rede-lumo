@@ -1,22 +1,43 @@
-// Dados fictícios de presença da Rede Lumo por estado.
+// Presença da Rede Lumo por estado. Cada estado pode ter mais de uma rede de escolas.
 const LUMO_STATES = {
-    ac: { name: "Acre", network: "Lumo Rio Branco", units: ["Lumo Rio Branco Centro"] },
-    am: { name: "Amazonas", network: "Lumo Manaus", units: ["Lumo Manaus Adrianópolis", "Lumo Manaus Ponta Negra"] },
-    mt: { name: "Mato Grosso", network: "Colégio Horizonte", units: ["Horizonte Cuiabá Centro", "Horizonte Cuiabá Sul", "Horizonte Várzea Grande"] },
-    pa: { name: "Pará", network: "Lumo Belém", units: ["Lumo Belém Nazaré", "Lumo Belém Umarizal"] },
-    ma: { name: "Maranhão", network: "Colégio Vértice", units: ["Vértice São Luís"] },
-    go: { name: "Goiás", network: "Lumo Goiânia", units: ["Lumo Goiânia Setor Bueno", "Lumo Goiânia Jardim América"] },
-    sc: { name: "Santa Catarina", network: "Instituto Girassol", units: ["Girassol Florianópolis", "Girassol Joinville", "Girassol Blumenau", "Girassol Chapecó"] },
-    pr: { name: "Paraná", network: "Lumo Curitiba", units: ["Lumo Curitiba Batel", "Lumo Curitiba Água Verde", "Lumo Londrina", "Lumo Maringá", "Lumo Cascavel"] },
-    sp: { name: "São Paulo", network: "Lumo São Paulo", units: ["Lumo São Paulo Moema", "Lumo São Paulo Tatuapé", "Lumo Campinas", "Lumo Santo André", "Lumo Sorocaba", "Lumo Ribeirão Preto"] },
-    pe: { name: "Pernambuco", network: "Colégio Nascente", units: ["Nascente Boa Viagem", "Nascente Casa Forte", "Nascente Caruaru"] },
-    pb: { name: "Paraíba", network: "Lumo João Pessoa", units: ["Lumo João Pessoa Bessa", "Lumo Campina Grande"] },
-    rn: { name: "Rio Grande do Norte", network: "Lumo Natal", units: ["Lumo Natal Ponta Negra"] },
-    ce: { name: "Ceará", network: "Colégio Amanhecer", units: ["Amanhecer Aldeota", "Amanhecer Meireles", "Amanhecer Sobral"] },
-    ms: { name: "Mato Grosso do Sul", network: "Lumo Campo Grande", units: ["Lumo Campo Grande Centro", "Lumo Dourados"] },
-    mg: { name: "Minas Gerais", network: "Lumo Belo Horizonte", units: ["Lumo BH Savassi", "Lumo BH Castelo", "Lumo Uberlândia", "Lumo Juiz de Fora"] },
-    se: { name: "Sergipe", network: "Lumo Aracaju", units: ["Lumo Aracaju Jardins"] },
-    es: { name: "Espírito Santo", network: "Colégio Bússola", units: ["Bússola Vitória", "Bússola Vila Velha"] },
-    rj: { name: "Rio de Janeiro", network: "Lumo Rio de Janeiro", units: ["Lumo Barra da Tijuca", "Lumo Tijuca", "Lumo Botafogo", "Lumo Recreio", "Lumo Niterói"] },
-    df: { name: "Distrito Federal", network: "Lumo Brasília", units: ["Lumo Águas Claras", "Lumo Asa Norte", "Lumo Asa Sul"] },
+    ba: {
+        name: "Bahia",
+        networks: [
+            {
+                name: "Carpe Diem",
+                units: [
+                    "Carpe Diem - Caculé",
+                    "Carpe Diem - Dias Davilla",
+                    "Carpe Diem - Feira de Santana",
+                    "Carpe Diem - Litoral Norte",
+                    "Carpe Diem - Mangabas",
+                    "Carpe Diem - Sede/Matriz",
+                    "Carpe Diem - Ondina",
+                ],
+            },
+            {
+                name: "Casa do Sol",
+                units: ["Casa do Sol"],
+            },
+        ],
+    },
+    al: {
+        name: "Alagoas",
+        networks: [
+            {
+                name: "Carpe Diem",
+                units: ["Carpe Diem - Maceió"],
+            },
+        ],
+    },
+    ce: {
+        name: "Ceará",
+        networks: [
+            { name: "Aventurando", units: ["Aventurando - Fortaleza"] },
+            { name: "Exodus", units: ["Exodus - Fortaleza"] },
+            { name: "Conectivo", units: ["Conectivo - Fortaleza"] },
+            { name: "Paulo Freire", units: ["Paulo Freire - Fortaleza"] },
+            { name: "Renascer", units: ["Renascer - Fortaleza"] },
+        ],
+    },
 };
