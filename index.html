@@ -95,13 +95,22 @@
                     <p>Por trás de cada escola, há uma equipe dedicada de professores, coordenadores e colaboradores que fazem da educação sua missão de vida. Nossas histórias são construídas por pessoas que acreditam no poder transformador da educação e no potencial de cada aluno.</p>
                 </div>
             </div>
-            <div class="photos-grid">
-                <img src="assets/sala-de-aula.jpg" alt="Equipe Rede Lumo" loading="lazy">
-                <img src="assets/alunos-participando.jpg" alt="Equipe Rede Lumo" loading="lazy">
-                <img src="assets/laboratorio-informatica.jpg" alt="Equipe Rede Lumo" loading="lazy">
-                <img src="assets/alunos-participando.jpg" alt="Equipe Rede Lumo" loading="lazy">
-                <img src="assets/sala-de-aula.jpg" alt="Equipe Rede Lumo" loading="lazy">
-                <img src="assets/laboratorio-informatica.jpg" alt="Equipe Rede Lumo" loading="lazy">
+            <div class="photos-carousel">
+                <button class="photos-carousel-arrow photos-carousel-arrow-prev" type="button" aria-label="Anterior">
+                    <svg viewBox="0 0 24 24" width="20" height="20"><path d="M15.5 4.5 8 12l7.5 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
+                <div class="photos-carousel-viewport" id="photos-carousel-viewport">
+                    <div class="photos-carousel-track" id="photos-carousel-track">
+                        <div class="photos-carousel-item"><img src="assets/sala-de-aula.jpg" alt="Equipe Rede Lumo" loading="lazy"></div>
+                        <div class="photos-carousel-item"><img src="assets/alunos-participando.jpg" alt="Equipe Rede Lumo" loading="lazy"></div>
+                        <div class="photos-carousel-item"><img src="assets/laboratorio-informatica.jpg" alt="Equipe Rede Lumo" loading="lazy"></div>
+                        <div class="photos-carousel-item"><img src="assets/pessoas/professora-com-livro.jpg" alt="Equipe Rede Lumo" loading="lazy"></div>
+                        <div class="photos-carousel-item"><img src="assets/pessoas/professora-notebook.jpg" alt="Equipe Rede Lumo" loading="lazy"></div>
+                    </div>
+                </div>
+                <button class="photos-carousel-arrow photos-carousel-arrow-next" type="button" aria-label="Próximo">
+                    <svg viewBox="0 0 24 24" width="20" height="20"><path d="M8.5 4.5 16 12l-7.5 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </button>
             </div>
         </section>
 
@@ -686,6 +695,14 @@
     <script src="assets/nav.js"></script>
     <script src="assets/map-data.js"></script>
     <script src="assets/map.js"></script>
+    <script src="assets/carousel.js"></script>
+    <script>
+        initHorizontalCarousel({
+            track: '#photos-carousel-track',
+            prev: '.photos-carousel-arrow-prev',
+            next: '.photos-carousel-arrow-next',
+        });
+    </script>
     <script>
         // Favicon dark mode
         function updateFavicon() {

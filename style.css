@@ -62,7 +62,7 @@ header {
     background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(8px);
     z-index: 100;
-    border-bottom: 1px solid #eef1f1;
+    border-bottom: 3px solid var(--orange);
 }
 
 header img {
@@ -323,7 +323,7 @@ main {
 
 .nossas-escolas-content {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 48px;
     flex-wrap: wrap;
 }
@@ -331,7 +331,7 @@ main {
 .nossas-escolas-image {
     flex: 0 1 35%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
@@ -437,12 +437,6 @@ main {
     height: 12px;
 }
 
-/* o texto acompanha a rolagem das imagens em vez de se repetir a cada uma */
-.photos-text-inner {
-    position: sticky;
-    top: 130px;
-}
-
 .photos-text h2 {
     font-size: 32px;
     font-weight: 700;
@@ -457,19 +451,63 @@ main {
     line-height: 1.6;
 }
 
-/* imagens empilhadas, encostadas umas nas outras */
-.photos-grid {
+/* carrossel de fotos: percorre as imagens horizontalmente em vez de empilhar */
+.photos-carousel {
     flex: 1;
     min-width: 0;
+    min-height: clamp(280px, 33vw, 520px);
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 0 16px;
+    background: var(--bg-light);
 }
 
-.photos-grid img {
+.photos-carousel-arrow {
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #dfe5e5;
+    background: var(--white);
+    color: var(--teal-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.photos-carousel-arrow:hover {
+    background: var(--teal-dark);
+    color: var(--white);
+}
+
+.photos-carousel-viewport {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.photos-carousel-track {
+    display: flex;
+    height: 100%;
+    gap: 16px;
+    transition: transform 0.4s ease;
+    will-change: transform;
+}
+
+.photos-carousel-item {
+    flex: 0 0 clamp(220px, 30%, 340px);
+    height: 100%;
+}
+
+.photos-carousel-item img {
     width: 100%;
-    height: clamp(280px, 33vw, 520px);
+    height: 100%;
     object-fit: cover;
-    border-radius: 0;
+    border-radius: var(--radius-sm);
     display: block;
 }
 
@@ -2057,19 +2095,19 @@ footer .footer-bottom {
 @media (min-width: 769px) {
     /* professora de amarelo: rosto na parte alta da foto */
     .about-hero-photo img[src*="sala-de-aula"],
-    .photos-grid img[src*="sala-de-aula"] {
+    .photos-carousel-item img[src*="sala-de-aula"] {
         object-position: center 12%;
     }
 
     /* crianças sentadas: rostos no terço central */
     .about-hero-photo img[src*="alunos-participando"],
-    .photos-grid img[src*="alunos-participando"] {
+    .photos-carousel-item img[src*="alunos-participando"] {
         object-position: center 38%;
     }
 
     /* laboratório: professor ao fundo e alunos no meio do quadro */
     .about-hero-photo img[src*="laboratorio-informatica"],
-    .photos-grid img[src*="laboratorio-informatica"] {
+    .photos-carousel-item img[src*="laboratorio-informatica"] {
         object-position: center 32%;
     }
 }
@@ -2581,7 +2619,7 @@ footer .footer-bottom {
     }
 
     .photos-text,
-    .photos-grid {
+    .photos-carousel {
         flex: 1 1 auto;
         width: 100%;
     }
@@ -2590,17 +2628,17 @@ footer .footer-bottom {
         padding: 40px 20px;
     }
 
-    /* sem sticky no celular: o texto fica acima das imagens */
-    .photos-text-inner {
-        position: static;
-    }
-
     .photos-text h2 {
         font-size: 26px;
     }
 
-    .photos-grid img {
-        height: 260px;
+    .photos-carousel {
+        min-height: 260px;
+        padding: 0 12px;
+    }
+
+    .photos-carousel-item {
+        flex-basis: 78%;
     }
 
     .brasil-section {
