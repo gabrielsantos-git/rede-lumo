@@ -81,7 +81,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 48px;
+    gap: 200px;
     padding: 14px 60px;
     position: sticky;
     top: 0;
