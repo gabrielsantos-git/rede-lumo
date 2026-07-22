@@ -80,6 +80,7 @@ header nav {
 header nav a {
     text-decoration: none;
     color: var(--text);
+    position: relative;
 }
 
 header nav h4 {
@@ -89,19 +90,12 @@ header nav h4 {
     transition: color 0.2s ease;
 }
 
-header nav a:hover h4 {
-    color: var(--orange);
-}
-
+header nav a:hover h4,
 header nav a.active h4 {
     color: var(--teal-dark);
 }
 
-header nav a.active {
-    position: relative;
-}
-
-header nav a.active::after {
+header nav a::after {
     content: '';
     position: absolute;
     left: 0;
@@ -110,6 +104,112 @@ header nav a.active::after {
     height: 2px;
     background: var(--teal-dark);
     border-radius: 1px;
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+}
+
+header nav a:hover::after,
+header nav a.active::after {
+    transform: scaleX(1);
+}
+
+/* ----- nav dropdown (ex: Impacto > Sustentabilidade / Instituto Lumo) ----- */
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-trigger {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    position: relative;
+}
+
+.nav-dropdown-trigger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    height: 2px;
+    background: var(--teal-dark);
+    border-radius: 1px;
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+}
+
+.nav-dropdown-trigger:hover h4,
+.nav-dropdown.open .nav-dropdown-trigger h4,
+.nav-dropdown:has(.nav-dropdown-menu a.active) .nav-dropdown-trigger h4 {
+    color: var(--teal-dark);
+}
+
+.nav-dropdown-trigger:hover::after,
+.nav-dropdown.open .nav-dropdown-trigger::after,
+.nav-dropdown:has(.nav-dropdown-menu a.active) .nav-dropdown-trigger::after {
+    transform: scaleX(1);
+}
+
+.nav-dropdown-caret {
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.nav-dropdown:hover .nav-dropdown-caret,
+.nav-dropdown.open .nav-dropdown-caret {
+    transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 16px);
+    left: 50%;
+    min-width: 200px;
+    background: var(--white);
+    border: 1px solid #e7eceb;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 12px 28px rgba(11, 59, 62, 0.14);
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) translateY(-6px);
+    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+    z-index: 10;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown.open .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.nav-dropdown-menu a {
+    position: static;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.nav-dropdown-menu a::after {
+    display: none;
+}
+
+.nav-dropdown-menu a:hover,
+.nav-dropdown-menu a.active {
+    background: var(--bg-light);
+    color: var(--teal-dark);
 }
 
 .nav-toggle {
@@ -183,7 +283,6 @@ main {
     gap: 32px;
     padding: 72px 0 56px;
     border-bottom: 1px solid #eef1f1;
-    background: var(--bg-light);
 }
 
 .infoLumo > h1 {
@@ -213,6 +312,13 @@ main {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.infoLumo section:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(11, 59, 62, 0.12);
+    border-color: var(--teal-dark);
 }
 
 .infoLumo-icon {
@@ -1442,6 +1548,12 @@ main.page {
     border: 1px solid var(--teal-dark);
     border-radius: var(--radius);
     overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.media-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(11, 59, 62, 0.16);
 }
 
 .media-card img {
@@ -2525,6 +2637,41 @@ footer .footer-bottom {
         left: 0;
         right: auto;
         width: 24px;
+    }
+
+    .nav-dropdown-trigger {
+        width: 100%;
+        justify-content: space-between;
+        padding: 12px 0;
+    }
+
+    .nav-dropdown.open .nav-dropdown-trigger::after,
+    .nav-dropdown:has(.nav-dropdown-menu a.active) .nav-dropdown-trigger::after {
+        bottom: 10px;
+        left: 0;
+        right: auto;
+        width: 24px;
+    }
+
+    .nav-dropdown-menu {
+        position: static;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        box-shadow: none;
+        border: none;
+        padding: 0 0 0 16px;
+        min-width: 0;
+        display: none;
+    }
+
+    .nav-dropdown.open .nav-dropdown-menu {
+        display: flex;
+        transform: none;
+    }
+
+    .nav-dropdown-menu a {
+        padding: 10px 0;
     }
 
     main,

@@ -58,7 +58,30 @@
         });
     }
 
+    function initNavDropdowns() {
+        document.querySelectorAll('.nav-dropdown').forEach((dropdown) => {
+            const trigger = dropdown.querySelector('.nav-dropdown-trigger');
+            if (!trigger) return;
+
+            trigger.addEventListener('click', (event) => {
+                event.stopPropagation();
+                const isOpen = dropdown.classList.toggle('open');
+                trigger.setAttribute('aria-expanded', String(isOpen));
+            });
+        });
+
+        document.addEventListener('click', (event) => {
+            document.querySelectorAll('.nav-dropdown.open').forEach((dropdown) => {
+                if (!dropdown.contains(event.target)) {
+                    dropdown.classList.remove('open');
+                    dropdown.querySelector('.nav-dropdown-trigger')?.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+    }
+
     setActiveNav();
     initMobileNav();
+    initNavDropdowns();
     window.addEventListener('hashchange', setActiveNav);
 })();
