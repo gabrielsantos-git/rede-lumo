@@ -523,7 +523,7 @@ main {
 
 .brasil-map-wrapper {
     display: grid;
-    grid-template-columns: 1.9fr 1fr;
+    grid-template-columns: 1.6fr 1fr;
     gap: 40px;
     align-items: center;
     text-align: left;
@@ -536,8 +536,17 @@ main {
 
 .brasil-map svg {
     width: 100%;
-    max-width: 1600px;
+    max-width: 1800px;
     height: auto;
+}
+
+@media (min-width: 1200px) {
+    .brasil-map-wrapper {
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        padding: 0 5vw;
+        box-sizing: border-box;
+    }
 }
 
 .brasil-map svg path.land {
