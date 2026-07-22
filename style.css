@@ -21,6 +21,7 @@
 html {
     scrollbar-width: thin;
     scrollbar-color: var(--teal-dark) var(--bg-light);
+    scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -1502,6 +1503,10 @@ main.page {
 
 /* respeita quem prefere menos movimento na interface */
 @media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
     .timeline-dot::after {
         animation: none;
     }
