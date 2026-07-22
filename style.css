@@ -1923,6 +1923,7 @@ footer {
     background: var(--teal-dark);
     color: rgba(255, 255, 255, 0.75);
     padding: 56px 60px 28px;
+    border-radius: 20% 20% 0 0 / 48px 48px 0 0;
 }
 
 footer .footer-top {
