@@ -669,7 +669,7 @@ main {
     display: grid;
     grid-template-columns: 1fr minmax(280px, 380px);
     gap: 40px;
-    align-items: center;
+    align-items: start;
     text-align: left;
 }
 
@@ -748,6 +748,14 @@ main {
     overflow-y: auto;
     display: flex;
     align-items: flex-start;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.brasil-results.is-swapping {
+    opacity: 0;
+    transform: translateY(-10px);
 }
 
 .brasil-results-empty {
