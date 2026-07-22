@@ -69,6 +69,19 @@
         `;
     }
 
+    const SWAP_TRANSITION_MS = 220;
+
+    // Anima a saída do conteúdo atual antes de trocar pelo novo,
+    // e a entrada do novo conteúdo em seguida.
+    function swapResults(code) {
+        results.classList.add('is-swapping');
+        window.setTimeout(() => {
+            renderState(code);
+            void results.offsetHeight; // força reflow para a transição de entrada rodar
+            results.classList.remove('is-swapping');
+        }, SWAP_TRANSITION_MS);
+    }
+
     function selectState(code) {
         paths.forEach((p) => p.classList.remove('active'));
         labels.forEach((l) => l.classList.remove('active'));
@@ -79,7 +92,7 @@
         if (activeLabel) activeLabel.classList.add('active');
 
         select.value = code;
-        renderState(code);
+        swapResults(code);
     }
 
     paths.forEach((path) => {
