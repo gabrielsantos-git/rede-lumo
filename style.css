@@ -1204,6 +1204,48 @@ main.page {
     z-index: 1;
 }
 
+/* pulso: um contorno que cresce a partir do losango e se dissolve.
+   Fica dentro do elemento já rotacionado, então a onda também é um losango. */
+.timeline-dot::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 2px solid var(--orange);
+    background: transparent;
+    animation: pulso-losango 2.4s ease-out infinite;
+    pointer-events: none;
+}
+
+@keyframes pulso-losango {
+    0% {
+        transform: scale(1);
+        opacity: 0.85;
+    }
+    70% {
+        opacity: 0;
+    }
+    100% {
+        transform: scale(2.8);
+        opacity: 0;
+    }
+}
+
+/* defasagem para os losangos não pulsarem todos juntos */
+.timeline-node:nth-child(3n + 2) .timeline-dot::after {
+    animation-delay: 0.8s;
+}
+
+.timeline-node:nth-child(3n) .timeline-dot::after {
+    animation-delay: 1.6s;
+}
+
+/* respeita quem prefere menos movimento na interface */
+@media (prefers-reduced-motion: reduce) {
+    .timeline-dot::after {
+        animation: none;
+    }
+}
+
 .timeline-year {
     font-size: 40px;
     font-weight: 800;
