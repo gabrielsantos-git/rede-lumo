@@ -1131,6 +1131,13 @@ main.page {
     display: flex;
     overflow-x: auto;
     padding: 0 40px 24px;
+    /* rolagem continua funcionando, mas sem a barra à mostra */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.timeline-track::-webkit-scrollbar {
+    display: none;
 }
 
 .timeline-node {
@@ -2241,21 +2248,59 @@ footer .footer-bottom {
         padding: 0 20px;
     }
 
+    /* no celular a linha do tempo vira vertical: marcador à esquerda,
+       texto à direita, sem rolagem horizontal */
     .timeline-track {
-        padding: 0 20px 20px;
-    }
-
-    .timeline-track::before {
-        left: 20px;
-        right: 20px;
+        flex-direction: column;
+        overflow-x: visible;
+        padding: 8px 20px 0;
     }
 
     .timeline-node {
-        flex: 0 0 200px;
+        flex: 0 0 auto;
+        height: auto;
+        grid-template-columns: 26px 1fr;
+        grid-template-rows: auto;
+        text-align: left;
+        padding: 0 0 28px;
+    }
+
+    /* a linha passa a ser vertical, ligando um marcador ao outro */
+    .timeline-node::before {
+        top: 16px;
+        bottom: 0;
+        left: 12px;
+        right: auto;
+        width: 1px;
+        height: auto;
+    }
+
+    .timeline-node:last-child::before {
+        display: none;
+    }
+
+    .timeline-node .timeline-dot {
+        grid-column: 1;
+        grid-row: 1;
+        margin: 4px 0 0;
+        justify-self: center;
+        align-self: start;
+    }
+
+    .timeline-node .timeline-content {
+        grid-column: 2;
+        grid-row: 1;
+        align-self: start;
+        padding-left: 4px;
+    }
+
+    .timeline-node .timeline-spacer {
+        display: none;
     }
 
     .timeline-year {
-        font-size: 28px;
+        font-size: 26px;
+        margin-bottom: 6px;
     }
 
     .media-section {
@@ -2481,10 +2526,6 @@ footer .footer-bottom {
     .media-card,
     .ethics-logo-item {
         flex: 0 0 100%;
-    }
-
-    .timeline-node {
-        flex: 0 0 180px;
     }
 
     .split-section,
