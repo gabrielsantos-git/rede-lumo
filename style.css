@@ -303,7 +303,17 @@ header nav a.active::after {
     pointer-events: none;
 }
 
-.nav-dropdown.open .nav-dropdown-sub:hover .nav-dropdown-sub-menu {
+/* Remove o hover automático do submenu do Carpe Diem */
+.nav-dropdown-sub .nav-dropdown-menu.nav-dropdown-sub-menu {
+    display: none; /* Oculto por padrão */
+}
+
+/* O submenu só aparece quando a classe .active for adicionada via JS */
+.nav-dropdown-sub .nav-dropdown-menu.nav-dropdown-sub-menu.active {
+    display: block; 
+}
+
+.nav-dropdown.open .nav-dropdown-sub .nav-dropdown-sub-menu {
     opacity: 1;
     visibility: visible;
     transform: translateX(0);
