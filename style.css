@@ -251,42 +251,15 @@ header nav a.active::after {
     transform: scaleX(1);
 }
 
-/* ----- nav dropdown submenu ----- */
-.nav-dropdown-sub {
-    position: relative;
-}
+/* ==========================================
+   CORREÇÃO DO SUB-DROPDOWN
+   ========================================== */
 
-.nav-dropdown-sub-trigger {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    background: none;
-    border: none;
-    padding: 10px 14px;
-    font: inherit;
-    color: inherit;
-    cursor: pointer;
-    border-radius: 8px;
-    width: 100%;
-    text-align: left;
-    position: relative;
-}
-
-.nav-dropdown-sub-trigger h4 {
-    font-size: 14px;
-    font-weight: 600;
-    margin: 0;
-}
-
-.nav-dropdown-sub-trigger:hover h4,
-.nav-dropdown-sub.open .nav-dropdown-sub-trigger h4 {
-    color: var(--teal-dark);
-}
-
+/* 1. Estilo base do submenu (sem o gap de 8px e alinhado) */
 .nav-dropdown-sub-menu {
     position: absolute;
     top: 0;
-    left: calc(100% + 8px);
+    left: 100%; /* Colado na lateral, sem o espaço invisível que fechava o menu */
     min-width: 180px;
     background: var(--white);
     border: 1px solid #e7eceb;
@@ -303,64 +276,12 @@ header nav a.active::after {
     pointer-events: none;
 }
 
-/* Remove o hover automático do submenu do Carpe Diem */
-.nav-dropdown-sub .nav-dropdown-menu.nav-dropdown-sub-menu {
-    display: none; /* Oculto por padrão */
-}
-
-/* O submenu só aparece quando a classe .active for adicionada via JS */
-.nav-dropdown-sub .nav-dropdown-menu.nav-dropdown-sub-menu.active {
-    display: block; 
-}
-
-.nav-dropdown.open .nav-dropdown-sub .nav-dropdown-sub-menu {
+/* 2. Exibição quando o JS adiciona a classe .active */
+.nav-dropdown-sub-menu.active {
     opacity: 1;
     visibility: visible;
     transform: translateX(0);
     pointer-events: auto;
-}
-
-.nav-dropdown-sub .nav-dropdown-caret {
-    margin-left: auto;
-}
-
-.nav-dropdown-sub:hover .nav-dropdown-caret,
-.nav-dropdown-sub.open .nav-dropdown-caret {
-    transform: rotate(-90deg);
-}
-
-.nav-dropdown-sub-menu a {
-    position: relative;
-    padding: 10px 14px;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 600;
-    white-space: nowrap;
-    text-decoration: none;
-    color: var(--text);
-}
-
-.nav-dropdown-sub-menu a::after {
-    content: '';
-    position: absolute;
-    left: 14px;
-    right: 14px;
-    bottom: 4px;
-    height: 2px;
-    background: var(--teal-dark);
-    border-radius: 1px;
-    transform: scaleX(0);
-    transition: transform 0.2s ease;
-}
-
-.nav-dropdown-sub-menu a:hover,
-.nav-dropdown-sub-menu a.active {
-    color: var(--teal-dark);
-}
-
-.nav-dropdown-sub-menu a:hover::after,
-.nav-dropdown-sub-menu a.active::after {
-    transform: scaleX(1);
 }
 
 .nav-toggle {
