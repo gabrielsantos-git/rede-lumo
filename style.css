@@ -251,6 +251,107 @@ header nav a.active::after {
     transform: scaleX(1);
 }
 
+/* ----- nav dropdown submenu ----- */
+.nav-dropdown-sub {
+    position: relative;
+}
+
+.nav-dropdown-sub-trigger {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: none;
+    border: none;
+    padding: 10px 14px;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 100%;
+    text-align: left;
+    position: relative;
+}
+
+.nav-dropdown-sub-trigger h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.nav-dropdown-sub-trigger:hover h4,
+.nav-dropdown-sub.open .nav-dropdown-sub-trigger h4 {
+    color: var(--teal-dark);
+}
+
+.nav-dropdown-sub-menu {
+    position: absolute;
+    top: 0;
+    left: calc(100% + 8px);
+    min-width: 180px;
+    background: var(--white);
+    border: 1px solid #e7eceb;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 12px 28px rgba(11, 59, 62, 0.14);
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-6px);
+    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+    z-index: 20;
+}
+
+.nav-dropdown-sub:hover .nav-dropdown-sub-menu,
+.nav-dropdown-sub.open .nav-dropdown-sub-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.nav-dropdown-sub .nav-dropdown-caret {
+    margin-left: auto;
+}
+
+.nav-dropdown-sub:hover .nav-dropdown-caret,
+.nav-dropdown-sub.open .nav-dropdown-caret {
+    transform: rotate(-90deg);
+}
+
+.nav-dropdown-sub-menu a {
+    position: relative;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    text-decoration: none;
+    color: var(--text);
+}
+
+.nav-dropdown-sub-menu a::after {
+    content: '';
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 4px;
+    height: 2px;
+    background: var(--teal-dark);
+    border-radius: 1px;
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+}
+
+.nav-dropdown-sub-menu a:hover,
+.nav-dropdown-sub-menu a.active {
+    color: var(--teal-dark);
+}
+
+.nav-dropdown-sub-menu a:hover::after,
+.nav-dropdown-sub-menu a.active::after {
+    transform: scaleX(1);
+}
+
 .nav-toggle {
     display: none;
     flex-direction: column;

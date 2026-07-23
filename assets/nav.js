@@ -70,11 +70,30 @@
             });
         });
 
+        // Handle nested dropdowns
+        document.querySelectorAll('.nav-dropdown-sub').forEach((subDropdown) => {
+            const subTrigger = subDropdown.querySelector('.nav-dropdown-sub-trigger');
+            if (!subTrigger) return;
+
+            subTrigger.addEventListener('click', (event) => {
+                event.stopPropagation();
+                const isOpen = subDropdown.classList.toggle('open');
+                subTrigger.setAttribute('aria-expanded', String(isOpen));
+            });
+        });
+
         document.addEventListener('click', (event) => {
             document.querySelectorAll('.nav-dropdown.open').forEach((dropdown) => {
                 if (!dropdown.contains(event.target)) {
                     dropdown.classList.remove('open');
                     dropdown.querySelector('.nav-dropdown-trigger')?.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            document.querySelectorAll('.nav-dropdown-sub.open').forEach((subDropdown) => {
+                if (!subDropdown.contains(event.target)) {
+                    subDropdown.classList.remove('open');
+                    subDropdown.querySelector('.nav-dropdown-sub-trigger')?.setAttribute('aria-expanded', 'false');
                 }
             });
         });
