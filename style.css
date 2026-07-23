@@ -300,12 +300,15 @@ header nav a.active::after {
     transform: translateX(-6px);
     transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
     z-index: 20;
+    pointer-events: none;
 }
 
-.nav-dropdown-sub:hover .nav-dropdown-sub-menu {
+.nav-dropdown-sub-trigger:hover + .nav-dropdown-sub-menu,
+.nav-dropdown-sub-menu:hover {
     opacity: 1;
     visibility: visible;
     transform: translateX(0);
+    pointer-events: auto;
 }
 
 .nav-dropdown-sub .nav-dropdown-caret {
