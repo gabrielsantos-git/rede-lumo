@@ -3113,6 +3113,681 @@ footer .footer-bottom {
     background: #e55a2b;
 }
 
+/* ===== Página Casa do Sol - Paleta de cores específica ===== */
+.page-casa-do-sol {
+    --casa-do-sol-primary: #d4a574;
+    --casa-do-sol-secondary: #e8c49a;
+    --casa-do-sol-accent: #c78d5b;
+    --casa-do-sol-light: #f5e6d3;
+}
+
+.page-casa-do-sol header {
+    border-bottom-color: var(--casa-do-sol-accent);
+}
+
+.page-casa-do-sol header nav a:hover h4,
+.page-casa-do-sol header nav a.active h4 {
+    color: var(--casa-do-sol-primary);
+}
+
+.page-casa-do-sol header nav a::after {
+    background: var(--casa-do-sol-primary);
+}
+
+.page-casa-do-sol .nav-dropdown-trigger:hover h4,
+.page-casa-do-sol .nav-dropdown.open .nav-dropdown-trigger h4,
+.page-casa-do-sol .nav-dropdown:has(.nav-dropdown-menu a.active) .nav-dropdown-trigger h4 {
+    color: var(--casa-do-sol-primary);
+}
+
+.page-casa-do-sol .nav-dropdown-trigger::after {
+    background: var(--casa-do-sol-primary);
+}
+
+.page-casa-do-sol .nav-dropdown-menu a:hover,
+.page-casa-do-sol .nav-dropdown-menu a.active {
+    color: var(--casa-do-sol-primary);
+}
+
+.page-casa-do-sol .nav-dropdown-menu a::after {
+    background: var(--casa-do-sol-primary);
+}
+
+.page-casa-do-sol .school-hero::after {
+    background: linear-gradient(180deg, rgba(212, 165, 116, 0.15), rgba(212, 165, 116, 0.85));
+}
+
+.page-casa-do-sol .school-hero-content h1 {
+    color: var(--white);
+}
+
+.page-casa-do-sol .school-rating-stars {
+    color: var(--casa-do-sol-accent);
+}
+
+.page-casa-do-sol .school-action svg {
+    background: var(--casa-do-sol-light);
+    color: var(--casa-do-sol-primary);
+}
+
+.page-casa-do-sol .school-action:hover svg {
+    background: var(--casa-do-sol-primary);
+    color: var(--white);
+}
+
+.page-casa-do-sol .impact-intro-text h2 {
+    color: var(--casa-do-sol-primary);
+}
+
+.page-casa-do-sol .school-info-section > h2 {
+    color: var(--casa-do-sol-primary);
+}
+
+.page-casa-do-sol .school-info-card svg {
+    color: var(--casa-do-sol-primary);
+}
+
+.page-casa-do-sol .school-info-card h4 {
+    color: var(--casa-do-sol-primary);
+}
+
+.page-casa-do-sol .school-info-card a {
+    color: var(--casa-do-sol-primary);
+}
+
+.page-casa-do-sol .school-info-badge {
+    background: var(--casa-do-sol-light);
+    color: var(--casa-do-sol-primary);
+}
+
+.page-casa-do-sol .school-info-badge svg {
+    color: var(--casa-do-sol-accent);
+}
+
+.page-casa-do-sol .school-reviews-section > h2 {
+    color: var(--casa-do-sol-primary);
+}
+
+.page-casa-do-sol .school-reviews-summary strong {
+    color: var(--casa-do-sol-primary);
+}
+
+.page-casa-do-sol .school-reviews-summary .school-rating-stars {
+    color: var(--casa-do-sol-accent);
+}
+
+.page-casa-do-sol .school-review-card {
+    background: var(--casa-do-sol-light);
+}
+
+.page-casa-do-sol .school-review-card:hover {
+    box-shadow: 0 10px 24px rgba(212, 165, 116, 0.15);
+}
+
+.page-casa-do-sol .school-review-name {
+    color: var(--casa-do-sol-primary);
+}
+
+.page-casa-do-sol .school-review-stars {
+    color: var(--casa-do-sol-accent);
+}
+
+.page-casa-do-sol .impact-cta-overlay {
+    background: linear-gradient(120deg, rgba(212, 165, 116, 0.92), rgba(212, 165, 116, 0.8));
+}
+
+.page-casa-do-sol .impact-cta-content h2 {
+    color: var(--white);
+}
+
+.page-casa-do-sol .btn {
+    background: var(--casa-do-sol-accent);
+}
+
+.page-casa-do-sol .btn:hover {
+    background: #b07248;
+}
+
+/* ===== Página Colégio Conectivo - Paleta de cores específica ===== */
+.page-conectivo {
+    --conectivo-primary: #4a90a4;
+    --conectivo-secondary: #6bb8d1;
+    --conectivo-accent: #ff6b6b;
+    --conectivo-light: #e0f0f5;
+}
+
+.page-conectivo header {
+    border-bottom-color: var(--conectivo-accent);
+}
+
+.page-conectivo header nav a:hover h4,
+.page-conectivo header nav a.active h4 {
+    color: var(--conectivo-primary);
+}
+
+.page-conectivo header nav a::after {
+    background: var(--conectivo-primary);
+}
+
+.page-conectivo .nav-dropdown-trigger:hover h4,
+.page-conectivo .nav-dropdown.open .nav-dropdown-trigger h4,
+.page-conectivo .nav-dropdown:has(.nav-dropdown-menu a.active) .nav-dropdown-trigger h4 {
+    color: var(--conectivo-primary);
+}
+
+.page-conectivo .nav-dropdown-trigger::after {
+    background: var(--conectivo-primary);
+}
+
+.page-conectivo .nav-dropdown-menu a:hover,
+.page-conectivo .nav-dropdown-menu a.active {
+    color: var(--conectivo-primary);
+}
+
+.page-conectivo .nav-dropdown-menu a::after {
+    background: var(--conectivo-primary);
+}
+
+.page-conectivo .school-hero::after {
+    background: linear-gradient(180deg, rgba(74, 144, 164, 0.15), rgba(74, 144, 164, 0.85));
+}
+
+.page-conectivo .school-hero-content h1 {
+    color: var(--white);
+}
+
+.page-conectivo .school-rating-stars {
+    color: var(--conectivo-accent);
+}
+
+.page-conectivo .school-action svg {
+    background: var(--conectivo-light);
+    color: var(--conectivo-primary);
+}
+
+.page-conectivo .school-action:hover svg {
+    background: var(--conectivo-primary);
+    color: var(--white);
+}
+
+.page-conectivo .impact-intro-text h2 {
+    color: var(--conectivo-primary);
+}
+
+.page-conectivo .school-info-section > h2 {
+    color: var(--conectivo-primary);
+}
+
+.page-conectivo .school-info-card svg {
+    color: var(--conectivo-primary);
+}
+
+.page-conectivo .school-info-card h4 {
+    color: var(--conectivo-primary);
+}
+
+.page-conectivo .school-info-card a {
+    color: var(--conectivo-primary);
+}
+
+.page-conectivo .school-info-badge {
+    background: var(--conectivo-light);
+    color: var(--conectivo-primary);
+}
+
+.page-conectivo .school-info-badge svg {
+    color: var(--conectivo-accent);
+}
+
+.page-conectivo .school-reviews-section > h2 {
+    color: var(--conectivo-primary);
+}
+
+.page-conectivo .school-reviews-summary strong {
+    color: var(--conectivo-primary);
+}
+
+.page-conectivo .school-reviews-summary .school-rating-stars {
+    color: var(--conectivo-accent);
+}
+
+.page-conectivo .school-review-card {
+    background: var(--conectivo-light);
+}
+
+.page-conectivo .school-review-card:hover {
+    box-shadow: 0 10px 24px rgba(74, 144, 164, 0.15);
+}
+
+.page-conectivo .school-review-name {
+    color: var(--conectivo-primary);
+}
+
+.page-conectivo .school-review-stars {
+    color: var(--conectivo-accent);
+}
+
+.page-conectivo .impact-cta-overlay {
+    background: linear-gradient(120deg, rgba(74, 144, 164, 0.92), rgba(74, 144, 164, 0.8));
+}
+
+.page-conectivo .impact-cta-content h2 {
+    color: var(--white);
+}
+
+.page-conectivo .btn {
+    background: var(--conectivo-accent);
+}
+
+.page-conectivo .btn:hover {
+    background: #e55a5a;
+}
+
+/* ===== Página Colégio Exodus - Paleta de cores específica ===== */
+.page-exodus {
+    --exodus-primary: #2c5f2d;
+    --exodus-secondary: #4a8a4b;
+    --exodus-accent: #ffc107;
+    --exodus-light: #e8f5e9;
+}
+
+.page-exodus header {
+    border-bottom-color: var(--exodus-accent);
+}
+
+.page-exodus header nav a:hover h4,
+.page-exodus header nav a.active h4 {
+    color: var(--exodus-primary);
+}
+
+.page-exodus header nav a::after {
+    background: var(--exodus-primary);
+}
+
+.page-exodus .nav-dropdown-trigger:hover h4,
+.page-exodus .nav-dropdown.open .nav-dropdown-trigger h4,
+.page-exodus .nav-dropdown:has(.nav-dropdown-menu a.active) .nav-dropdown-trigger h4 {
+    color: var(--exodus-primary);
+}
+
+.page-exodus .nav-dropdown-trigger::after {
+    background: var(--exodus-primary);
+}
+
+.page-exodus .nav-dropdown-menu a:hover,
+.page-exodus .nav-dropdown-menu a.active {
+    color: var(--exodus-primary);
+}
+
+.page-exodus .nav-dropdown-menu a::after {
+    background: var(--exodus-primary);
+}
+
+.page-exodus .school-hero::after {
+    background: linear-gradient(180deg, rgba(44, 95, 45, 0.15), rgba(44, 95, 45, 0.85));
+}
+
+.page-exodus .school-hero-content h1 {
+    color: var(--white);
+}
+
+.page-exodus .school-rating-stars {
+    color: var(--exodus-accent);
+}
+
+.page-exodus .school-action svg {
+    background: var(--exodus-light);
+    color: var(--exodus-primary);
+}
+
+.page-exodus .school-action:hover svg {
+    background: var(--exodus-primary);
+    color: var(--white);
+}
+
+.page-exodus .impact-intro-text h2 {
+    color: var(--exodus-primary);
+}
+
+.page-exodus .school-info-section > h2 {
+    color: var(--exodus-primary);
+}
+
+.page-exodus .school-info-card svg {
+    color: var(--exodus-primary);
+}
+
+.page-exodus .school-info-card h4 {
+    color: var(--exodus-primary);
+}
+
+.page-exodus .school-info-card a {
+    color: var(--exodus-primary);
+}
+
+.page-exodus .school-info-badge {
+    background: var(--exodus-light);
+    color: var(--exodus-primary);
+}
+
+.page-exodus .school-info-badge svg {
+    color: var(--exodus-accent);
+}
+
+.page-exodus .school-reviews-section > h2 {
+    color: var(--exodus-primary);
+}
+
+.page-exodus .school-reviews-summary strong {
+    color: var(--exodus-primary);
+}
+
+.page-exodus .school-reviews-summary .school-rating-stars {
+    color: var(--exodus-accent);
+}
+
+.page-exodus .school-review-card {
+    background: var(--exodus-light);
+}
+
+.page-exodus .school-review-card:hover {
+    box-shadow: 0 10px 24px rgba(44, 95, 45, 0.15);
+}
+
+.page-exodus .school-review-name {
+    color: var(--exodus-primary);
+}
+
+.page-exodus .school-review-stars {
+    color: var(--exodus-accent);
+}
+
+.page-exodus .impact-cta-overlay {
+    background: linear-gradient(120deg, rgba(44, 95, 45, 0.92), rgba(44, 95, 45, 0.8));
+}
+
+.page-exodus .impact-cta-content h2 {
+    color: var(--white);
+}
+
+.page-exodus .btn {
+    background: var(--exodus-accent);
+}
+
+.page-exodus .btn:hover {
+    background: #e6a800;
+}
+
+/* ===== Página Colégio Paulo Freire - Paleta de cores específica ===== */
+.page-paulo-freire {
+    --paulo-freire-primary: #1e3a5f;
+    --paulo-freire-secondary: #2d5a7f;
+    --paulo-freire-accent: #e94560;
+    --paulo-freire-light: #e8f0f5;
+}
+
+.page-paulo-freire header {
+    border-bottom-color: var(--paulo-freire-accent);
+}
+
+.page-paulo-freire header nav a:hover h4,
+.page-paulo-freire header nav a.active h4 {
+    color: var(--paulo-freire-primary);
+}
+
+.page-paulo-freire header nav a::after {
+    background: var(--paulo-freire-primary);
+}
+
+.page-paulo-freire .nav-dropdown-trigger:hover h4,
+.page-paulo-freire .nav-dropdown.open .nav-dropdown-trigger h4,
+.page-paulo-freire .nav-dropdown:has(.nav-dropdown-menu a.active) .nav-dropdown-trigger h4 {
+    color: var(--paulo-freire-primary);
+}
+
+.page-paulo-freire .nav-dropdown-trigger::after {
+    background: var(--paulo-freire-primary);
+}
+
+.page-paulo-freire .nav-dropdown-menu a:hover,
+.page-paulo-freire .nav-dropdown-menu a.active {
+    color: var(--paulo-freire-primary);
+}
+
+.page-paulo-freire .nav-dropdown-menu a::after {
+    background: var(--paulo-freire-primary);
+}
+
+.page-paulo-freire .school-hero::after {
+    background: linear-gradient(180deg, rgba(30, 58, 95, 0.15), rgba(30, 58, 95, 0.85));
+}
+
+.page-paulo-freire .school-hero-content h1 {
+    color: var(--white);
+}
+
+.page-paulo-freire .school-rating-stars {
+    color: var(--paulo-freire-accent);
+}
+
+.page-paulo-freire .school-action svg {
+    background: var(--paulo-freire-light);
+    color: var(--paulo-freire-primary);
+}
+
+.page-paulo-freire .school-action:hover svg {
+    background: var(--paulo-freire-primary);
+    color: var(--white);
+}
+
+.page-paulo-freire .impact-intro-text h2 {
+    color: var(--paulo-freire-primary);
+}
+
+.page-paulo-freire .school-info-section > h2 {
+    color: var(--paulo-freire-primary);
+}
+
+.page-paulo-freire .school-info-card svg {
+    color: var(--paulo-freire-primary);
+}
+
+.page-paulo-freire .school-info-card h4 {
+    color: var(--paulo-freire-primary);
+}
+
+.page-paulo-freire .school-info-card a {
+    color: var(--paulo-freire-primary);
+}
+
+.page-paulo-freire .school-info-badge {
+    background: var(--paulo-freire-light);
+    color: var(--paulo-freire-primary);
+}
+
+.page-paulo-freire .school-info-badge svg {
+    color: var(--paulo-freire-accent);
+}
+
+.page-paulo-freire .school-reviews-section > h2 {
+    color: var(--paulo-freire-primary);
+}
+
+.page-paulo-freire .school-reviews-summary strong {
+    color: var(--paulo-freire-primary);
+}
+
+.page-paulo-freire .school-reviews-summary .school-rating-stars {
+    color: var(--paulo-freire-accent);
+}
+
+.page-paulo-freire .school-review-card {
+    background: var(--paulo-freire-light);
+}
+
+.page-paulo-freire .school-review-card:hover {
+    box-shadow: 0 10px 24px rgba(30, 58, 95, 0.15);
+}
+
+.page-paulo-freire .school-review-name {
+    color: var(--paulo-freire-primary);
+}
+
+.page-paulo-freire .school-review-stars {
+    color: var(--paulo-freire-accent);
+}
+
+.page-paulo-freire .impact-cta-overlay {
+    background: linear-gradient(120deg, rgba(30, 58, 95, 0.92), rgba(30, 58, 95, 0.8));
+}
+
+.page-paulo-freire .impact-cta-content h2 {
+    color: var(--white);
+}
+
+.page-paulo-freire .btn {
+    background: var(--paulo-freire-accent);
+}
+
+.page-paulo-freire .btn:hover {
+    background: #d13a55;
+}
+
+/* ===== Página Carpe Diem - Paleta de cores específica ===== */
+.page-carpe-diem {
+    --carpe-diem-primary: #8b4513;
+    --carpe-diem-secondary: #a0522d;
+    --carpe-diem-accent: #ffd700;
+    --carpe-diem-light: #fff8dc;
+}
+
+.page-carpe-diem header {
+    border-bottom-color: var(--carpe-diem-accent);
+}
+
+.page-carpe-diem header nav a:hover h4,
+.page-carpe-diem header nav a.active h4 {
+    color: var(--carpe-diem-primary);
+}
+
+.page-carpe-diem header nav a::after {
+    background: var(--carpe-diem-primary);
+}
+
+.page-carpe-diem .nav-dropdown-trigger:hover h4,
+.page-carpe-diem .nav-dropdown.open .nav-dropdown-trigger h4,
+.page-carpe-diem .nav-dropdown:has(.nav-dropdown-menu a.active) .nav-dropdown-trigger h4 {
+    color: var(--carpe-diem-primary);
+}
+
+.page-carpe-diem .nav-dropdown-trigger::after {
+    background: var(--carpe-diem-primary);
+}
+
+.page-carpe-diem .nav-dropdown-menu a:hover,
+.page-carpe-diem .nav-dropdown-menu a.active {
+    color: var(--carpe-diem-primary);
+}
+
+.page-carpe-diem .nav-dropdown-menu a::after {
+    background: var(--carpe-diem-primary);
+}
+
+.page-carpe-diem .school-hero::after {
+    background: linear-gradient(180deg, rgba(139, 69, 19, 0.15), rgba(139, 69, 19, 0.85));
+}
+
+.page-carpe-diem .school-hero-content h1 {
+    color: var(--white);
+}
+
+.page-carpe-diem .school-rating-stars {
+    color: var(--carpe-diem-accent);
+}
+
+.page-carpe-diem .school-action svg {
+    background: var(--carpe-diem-light);
+    color: var(--carpe-diem-primary);
+}
+
+.page-carpe-diem .school-action:hover svg {
+    background: var(--carpe-diem-primary);
+    color: var(--white);
+}
+
+.page-carpe-diem .impact-intro-text h2 {
+    color: var(--carpe-diem-primary);
+}
+
+.page-carpe-diem .school-info-section > h2 {
+    color: var(--carpe-diem-primary);
+}
+
+.page-carpe-diem .school-info-card svg {
+    color: var(--carpe-diem-primary);
+}
+
+.page-carpe-diem .school-info-card h4 {
+    color: var(--carpe-diem-primary);
+}
+
+.page-carpe-diem .school-info-card a {
+    color: var(--carpe-diem-primary);
+}
+
+.page-carpe-diem .school-info-badge {
+    background: var(--carpe-diem-light);
+    color: var(--carpe-diem-primary);
+}
+
+.page-carpe-diem .school-info-badge svg {
+    color: var(--carpe-diem-accent);
+}
+
+.page-carpe-diem .school-reviews-section > h2 {
+    color: var(--carpe-diem-primary);
+}
+
+.page-carpe-diem .school-reviews-summary strong {
+    color: var(--carpe-diem-primary);
+}
+
+.page-carpe-diem .school-reviews-summary .school-rating-stars {
+    color: var(--carpe-diem-accent);
+}
+
+.page-carpe-diem .school-review-card {
+    background: var(--carpe-diem-light);
+}
+
+.page-carpe-diem .school-review-card:hover {
+    box-shadow: 0 10px 24px rgba(139, 69, 19, 0.15);
+}
+
+.page-carpe-diem .school-review-name {
+    color: var(--carpe-diem-primary);
+}
+
+.page-carpe-diem .school-review-stars {
+    color: var(--carpe-diem-accent);
+}
+
+.page-carpe-diem .impact-cta-overlay {
+    background: linear-gradient(120deg, rgba(139, 69, 19, 0.92), rgba(139, 69, 19, 0.8));
+}
+
+.page-carpe-diem .impact-cta-content h2 {
+    color: var(--white);
+}
+
+.page-carpe-diem .btn {
+    background: var(--carpe-diem-accent);
+}
+
+.page-carpe-diem .btn:hover {
+    background: #e6c200;
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
     header {
