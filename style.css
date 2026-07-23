@@ -2980,10 +2980,10 @@ footer .footer-bottom {
 
 /* ===== Página Colégio Aventurando - Paleta de cores específica ===== */
 .page-aventurando {
-    --aventurando-primary: #1a5f5f;
-    --aventurando-secondary: #2d8a8a;
-    --aventurando-accent: #ff6b35;
-    --aventurando-light: #e8f4f4;
+    --aventurando-primary: #0d4f4f;
+    --aventurando-secondary: #1a7a7a;
+    --aventurando-accent: #f39c12;
+    --aventurando-light: #e8f5f5;
 }
 
 .page-aventurando header {
@@ -3031,7 +3031,7 @@ footer .footer-bottom {
 }
 
 .page-aventurando .school-hero::after {
-    background: linear-gradient(180deg, rgba(26, 95, 95, 0.15), rgba(26, 95, 95, 0.85));
+    background: linear-gradient(180deg, rgba(13, 79, 79, 0.15), rgba(13, 79, 79, 0.85));
 }
 
 .page-aventurando .school-hero-content h1 {
@@ -3110,7 +3110,7 @@ footer .footer-bottom {
 }
 
 .page-aventurando .btn:hover {
-    background: #e55a2b;
+    background: #e67e22;
 }
 
 /* ===== Página Casa do Sol - Paleta de cores específica ===== */
