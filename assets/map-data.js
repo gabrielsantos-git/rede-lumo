@@ -33,11 +33,11 @@ const LUMO_STATES = {
     ce: {
         name: "Ceará",
         networks: [
-            { name: "Aventurando", units: ["Aventurando - Fortaleza"] },
-            { name: "Exodus", units: ["Exodus - Fortaleza"] },
-            { name: "Conectivo", units: ["Conectivo - Fortaleza"] },
-            { name: "Paulo Freire", units: ["Paulo Freire - Fortaleza"] },
-            { name: "Renascer", units: ["Renascer - Fortaleza"] },
+            { name: "Aventurando", units: ["Aventurando"] },
+            { name: "Exodus", units: ["Exodus"] },
+            { name: "Conectivo", units: ["Conectivo"] },
+            { name: "Paulo Freire", units: ["Paulo Freire"] },
+            { name: "Renascer", units: ["Renascer"] },
         ],
     },
 };
