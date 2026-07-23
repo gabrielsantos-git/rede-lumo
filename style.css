@@ -2978,6 +2978,141 @@ footer .footer-bottom {
     line-height: 1.6;
 }
 
+/* ===== Página Colégio Aventurando - Paleta de cores específica ===== */
+.page-aventurando {
+    --aventurando-primary: #1a5f5f;
+    --aventurando-secondary: #2d8a8a;
+    --aventurando-accent: #ff6b35;
+    --aventurando-light: #e8f4f4;
+}
+
+.page-aventurando header {
+    border-bottom-color: var(--aventurando-accent);
+}
+
+.page-aventurando header nav a:hover h4,
+.page-aventurando header nav a.active h4 {
+    color: var(--aventurando-primary);
+}
+
+.page-aventurando header nav a::after {
+    background: var(--aventurando-primary);
+}
+
+.page-aventurando .nav-dropdown-trigger:hover h4,
+.page-aventurando .nav-dropdown.open .nav-dropdown-trigger h4,
+.page-aventurando .nav-dropdown:has(.nav-dropdown-menu a.active) .nav-dropdown-trigger h4 {
+    color: var(--aventurando-primary);
+}
+
+.page-aventurando .nav-dropdown-trigger::after {
+    background: var(--aventurando-primary);
+}
+
+.page-aventurando .nav-dropdown-menu a:hover,
+.page-aventurando .nav-dropdown-menu a.active {
+    color: var(--aventurando-primary);
+}
+
+.page-aventurando .nav-dropdown-menu a::after {
+    background: var(--aventurando-primary);
+}
+
+.page-aventurando .impact-intro-text h2 {
+    color: var(--aventurando-primary);
+}
+
+.page-aventurando .school-info-section > h2 {
+    color: var(--aventurando-primary);
+}
+
+.page-aventurando .school-reviews-section > h2 {
+    color: var(--aventurando-primary);
+}
+
+.page-aventurando .school-hero::after {
+    background: linear-gradient(180deg, rgba(26, 95, 95, 0.15), rgba(26, 95, 95, 0.85));
+}
+
+.page-aventurando .school-hero-content h1 {
+    color: var(--white);
+}
+
+.page-aventurando .school-rating-stars {
+    color: var(--aventurando-accent);
+}
+
+.page-aventurando .school-action svg {
+    background: var(--aventurando-light);
+    color: var(--aventurando-primary);
+}
+
+.page-aventurando .school-action:hover svg {
+    background: var(--aventurando-primary);
+    color: var(--white);
+}
+
+.page-aventurando .school-info-card svg {
+    color: var(--aventurando-primary);
+}
+
+.page-aventurando .school-info-card h4 {
+    color: var(--aventurando-primary);
+}
+
+.page-aventurando .school-info-card a {
+    color: var(--aventurando-primary);
+}
+
+.page-aventurando .school-info-badge {
+    background: var(--aventurando-light);
+    color: var(--aventurando-primary);
+}
+
+.page-aventurando .school-info-badge svg {
+    color: var(--aventurando-accent);
+}
+
+.page-aventurando .school-reviews-summary strong {
+    color: var(--aventurando-primary);
+}
+
+.page-aventurando .school-reviews-summary .school-rating-stars {
+    color: var(--aventurando-accent);
+}
+
+.page-aventurando .school-review-card {
+    background: var(--aventurando-light);
+}
+
+.page-aventurando .school-review-card:hover {
+    box-shadow: 0 10px 24px rgba(26, 95, 95, 0.15);
+}
+
+.page-aventurando .school-review-name {
+    color: var(--aventurando-primary);
+}
+
+.page-aventurando .school-review-stars {
+    color: var(--aventurando-accent);
+}
+
+.page-aventurando .impact-cta-overlay {
+    background: linear-gradient(120deg, rgba(26, 95, 95, 0.92), rgba(26, 95, 95, 0.8));
+}
+
+.page-aventurando .impact-cta-content h2 {
+    color: var(--white);
+}
+
+.page-aventurando .btn {
+    background: var(--aventurando-accent);
+}
+
+.page-aventurando .btn:hover {
+    background: #e55a2b;
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
     header {
