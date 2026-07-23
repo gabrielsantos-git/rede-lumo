@@ -303,8 +303,7 @@ header nav a.active::after {
     pointer-events: none;
 }
 
-.nav-dropdown-sub-trigger:hover + .nav-dropdown-sub-menu,
-.nav-dropdown-sub-menu:hover {
+.nav-dropdown.open .nav-dropdown-sub:hover .nav-dropdown-sub-menu {
     opacity: 1;
     visibility: visible;
     transform: translateX(0);
