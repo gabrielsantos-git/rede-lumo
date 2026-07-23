@@ -768,6 +768,27 @@
         
         updateFavicon();
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateFavicon);
+
+        document.addEventListener("DOMContentLoaded", function () {
+    const carpeDiemTrigger = document.querySelector(".nav-dropdown-sub-trigger");
+    const carpeDiemMenu = document.querySelector(".nav-dropdown-sub-menu");
+
+    if (carpeDiemTrigger && carpeDiemMenu) {
+        carpeDiemTrigger.addEventListener("click", function (event) {
+            event.stopPropagation(); // Impede que o clique feche o menu imediatamente
+            
+            // Alterna a classe active no menu e atualiza o atributo aria-expanded
+            const isActive = carpeDiemMenu.classList.toggle("active");
+            carpeDiemTrigger.setAttribute("aria-expanded", isActive);
+        });
+
+        // Fecha o dropdown do Carpe Diem se o usuário clicar em qualquer outro lugar da tela
+        document.addEventListener("click", function () {
+            carpeDiemMenu.classList.remove("active");
+            carpeDiemTrigger.setAttribute("aria-expanded", "false");
+        });
+    }
+});
     </script>
 </body>
 </html>
