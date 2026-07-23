@@ -302,8 +302,7 @@ header nav a.active::after {
     z-index: 20;
 }
 
-.nav-dropdown-sub:hover .nav-dropdown-sub-menu,
-.nav-dropdown-sub.open .nav-dropdown-sub-menu {
+.nav-dropdown-sub:hover .nav-dropdown-sub-menu {
     opacity: 1;
     visibility: visible;
     transform: translateX(0);
